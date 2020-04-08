@@ -10,6 +10,7 @@ module.exports = function (app) {
         })
     });
 
-    app.get('/run', index.trainAndPredict);
 
+    app.post('/run', index.trainAndPredict);
+    // app.post('/run', index.predict );
 };

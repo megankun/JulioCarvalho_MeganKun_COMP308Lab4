@@ -4,9 +4,13 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 // Load the module dependencies
 const configureExpress = require('./config/express');
 
+// Import the library:
+var cors = require('cors');
+// Then use it before your routes are set up:
+
 // Create a new Express application instance
 const app = configureExpress();
-
+app.use(cors());
 // Use the Express application instance to listen to the '3000' port
 app.listen(5000);
 
